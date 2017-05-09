@@ -9,13 +9,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Round About - Start Bootstrap Template</title>
+    <title>Grayscale - Start Bootstrap Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="css/round-about.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="css/grayscale.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,35 +28,59 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style type="text/css">
+        body {
+            width: 100%;
+            height: 100%;
+            font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: white;
+            background-color: black;
+        }
+        header.overlay {
+            background-color: Gray;
+            position:relative;
+            width: 100%;
+            height: 100%;
+            opacity: 0.80;
+            -moz-opacity: 20%;
+            -webkit-opacity: 20%;
+            z-index: 2;
+        }
+    </style>
 
 </head>
 
-<body>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class=" navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                <a class="navbar-brand page-scroll" href="#page-top" >
+                    <i class="fa fa-play-circle"></i> <span class="light" ">Start</span> Bootstrap
+                </a>
             </div>
+
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a class="page-scroll" href="#about" >About</a>
                     </li>
+
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="menu.html" >Menu</a>
+                    </li>
+
+                    <li>
+                        <a class="page-scroll" href="#contact" >Contact</a>
                     </li>
                 </ul>
             </div>
@@ -60,171 +89,79 @@
         <!-- /.container -->
     </nav>
 
-    <!-- Page Content -->
-    <div class="container">
-
-        <!-- Introduction Row -->
-        <div class="row">
-            <div class="col-lg-9 center">
-
-                <div class="row carousel-holder">
-
-                    <div class="col-md-12">
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
-                                </div>
-                            </div>
-                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                            </a>
-                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
+    <!-- Intro Header -->
+    <header class="intro overlay">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading" style=" padding-top: 80px; color:black;"> Fresh Foods </h1>
+                        <p class="intro-text" style="color:black;">A free program that serves food pantries, soup kitchens, summer meals sites, government nutrition programs and grassroots organizations, especially those that provide access to nutritious foods and nutritional support services.
+                            <br>Created by National Food Corp</p>
+                        <a href="#about"  style="color:black;" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
                     </div>
-
                 </div>
+            </div>
         </div>
+    </header>
 
-        <!-- Team Members Row -->
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
         <div class="row">
-            <div class="col-lg-12">
-                <h2 class="page-header">BREAKFAST</h2>
-            </div>
-            <div class="col-lg-9">
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
-                    <h3>BREAKFAST#1
-                        <small>Food Name</small>
-                    </h3>
-                    <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
-                    <h3>BREAKFAST#2
-                        <small>Food Name</small>
-                    </h3>
-                    <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
-                    <h3>BREAKFAST#3
-                        <small>Food Name</small>
-                    </h3>
-                    <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-                </div>
-
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
-                    <h3>LUNCH#1
-                        <small>Food Name</small>
-                    </h3>
-                    <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
-                    <h3>LUNCH#2
-                        <small>Food Name</small>
-                    </h3>
-                    <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
-                    <h3>LUNCH#3
-                        <small>Food Name</small>
-                    </h3>
-                    <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-                </div>
-
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
-                    <h3>DINNER#1
-                        <small>Food Name</small>
-                    </h3>
-                    <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-                </div>
-
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
-                    <h3>DINNER#2
-                        <small>Food Name</small>
-                    </h3>
-                    <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-                </div>
-
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
-                    <h3>DINNER#3
-                        <small>Food Name</small>
-                    </h3>
-                    <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-                </div>
-
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
-                    <h3>SNACK#1
-                        <small>Food Name</small>
-                    </h3>
-                    <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
-                    <h3>SNACK#2
-                        <small>Food Name</small>
-                    </h3>
-                    <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
-                    <h3>SNACK#3
-                        <small>Food Name</small>
-                    </h3>
-                    <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 text-center">
-                <img class="img-rounded img-responsive img-center" src="http://www.cthockeyleague.com/CHL_2014/media/img/300-600.png" alt="">
-                <h3>AD
-                    <small>placement</small>
-                </h3>
-            
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About Freshfoods</h2>
+                <p>Freshfoods is a program that offers runaways and homeless emergency food packs 24/7 and is open or to anyone who wants to come in.</p>
             </div>
         </div>
+    </section>
 
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Frugal Eats 2017</p>
-                </div>
-                <!-- /.col-lg-12 -->
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Start Nutritous Meals Menu</h2>
+                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
+                <p><a href="mailto:feedback@startbootstrap.com">feedback@sfreefoods.com</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                    </li>
+                </ul>
             </div>
-            <!-- /.row -->
-        </footer>
+        </div>
+    </section>
 
-    </div>
-    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Free Foods 2017</p>
+        </div>
+    </footer>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="vendor/jquery/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/grayscale.min.js"></script>
 
 </body>
 
